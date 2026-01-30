@@ -1,8 +1,8 @@
-# 📊 Machine Learning Projects
+# 📊 Machine Learning – Algorithm Examples
 
-Bu repository, **makine öğrenimi (Machine Learning)** alanında yapılan eğitim ve uygulama odaklı projeleri içermektedir. Amaç; makine öğrenimi algoritmalarını yalnızca teorik olarak değil, **gerçek veri setleri ve kod üzerinden** öğrenmek, modelleme mantığını kavramak ve uçtan uca bir ML sürecini deneyimlemektir.
+Bu repository, **makine öğrenimi algoritmalarını temel seviyede öğrenmek ve uygulamak** amacıyla hazırlanmış örnek projeleri içermektedir. Çalışmalar özellikle **KNN (K-Nearest Neighbors)** ve **Decision Tree (Karar Ağaçları)** algoritmalarına odaklanır.
 
-> Repo, Python ekosistemi ve Scikit-Learn kütüphanesi merkezli olacak şekilde yapılandırılmıştır.
+Her klasör, ilgili algoritmanın farklı senaryolarda uygulanmasını, görselleştirilmesini ve Python kodu ile mantığının anlaşılmasını hedefler.
 
 ---
 
@@ -10,85 +10,121 @@ Bu repository, **makine öğrenimi (Machine Learning)** alanında yapılan eğit
 
 ```text
 Machine_Learning/
-│
-├── machine_learninig/
-│   └── machine_learn/
-│       ├── veri_on_isleme.py / .ipynb
-│       ├── regresyon_modelleri.py / .ipynb
-│       ├── siniflandirma_modelleri.py / .ipynb
-│       ├── model_degerlendirme.py / .ipynb
-│       └── gorsellestirme.py / .ipynb
-│
-└── README.md
+└── machine_learninig/
+    └── machine_learn/
+        ├── dt/
+        │   ├── machine_learning_DT1.py
+        │   ├── learn_DT0.png
+        │   └── learn_DT1.png
+        │
+        ├── knn/
+        │   ├── machine_learning_KNN1.py
+        │   ├── machine_learning_KNN2.py
+        │   ├── machine_learning_KNN15.py
+        │   └── learning1.png
+        │
+        └── knn_example/
+            ├── knn_example1.py
+            ├── knn_example2.ipynb
+            ├── knn_and_tree_example.ipynb
+            └── knn_and_tree_example2.ipynb
 ```
 
-> Dosya isimleri ve içerikler, makine öğrenimi sürecinin doğal akışına uygun olacak şekilde düzenlenmiştir.
+---
+
+## 🎯 Projenin Amacı
+
+Bu repository'nin temel amaçları şunlardır:
+
+* Makine öğrenimi algoritmalarının **çalışma mantığını kavramak**
+* KNN ve Decision Tree algoritmalarını Python ile **sıfırdan uygulamak**
+* Model çıktılarının **görselleştirme ile yorumlanmasını sağlamak**
+* Teorik bilgiyi **küçük ve anlaşılır kod örnekleriyle** pekiştirmek
+
+Bu repo özellikle **öğrenme odaklı** hazırlanmıştır, üretim (production) amaçlı değildir.
 
 ---
 
-## 🎯 Amaç
+## 🧠 Klasör Detayları
 
-Bu projelerdeki temel hedefler:
+### 📂 `dt/` – Decision Tree (Karar Ağaçları)
 
-* Makine öğrenimi **temel kavramlarını** uygulamalı olarak öğrenmek
-* Veri ön işleme adımlarını doğru şekilde uygulamak
-* Farklı ML algoritmalarını karşılaştırmak
-* Model başarımını metrikler ile değerlendirmek
-* Kod okunabilirliği ve sürdürülebilirliğini artırmak
+Bu klasörde **Decision Tree algoritmasının** temel bir uygulaması yer alır.
 
-Bu repo, **öğrenciler**, **yeni başlayanlar** ve **ML pratiği yapmak isteyen geliştiriciler** için bir referans niteliği taşır.
+* `machine_learning_DT1.py`
+
+  * Karar ağacı modeli oluşturma
+  * Eğitim ve tahmin işlemleri
+  * Veriye göre karar mekanizmasının kurulması
+
+* `learn_DT0.png`, `learn_DT1.png`
+
+  * Karar ağacının veya öğrenme sürecinin görsel çıktıları
+  * Modelin nasıl dallandığını anlamaya yardımcı olur
+
+📌 **Amaç:** Karar ağaçlarının nasıl çalıştığını görsel ve kod üzerinden öğretmek.
 
 ---
 
-## 🧠 Ele Alınan Konular
+### 📂 `knn/` – K-Nearest Neighbors (KNN)
 
-Projelerde genel olarak aşağıdaki başlıklar ele alınmaktadır:
+Bu klasör, **KNN algoritmasının farklı K değerleri ile nasıl davrandığını** inceleyen Python scriptlerini içerir.
 
-### 🔹 Veri Ön İşleme
+* `machine_learning_KNN1.py`
+* `machine_learning_KNN2.py`
+* `machine_learning_KNN15.py`
 
-* Eksik verilerin ele alınması
-* Feature selection / feature scaling
-* Eğitim ve test verisi ayrımı
+Bu dosyalarda:
 
-### 🔹 Regresyon Modelleri
+* Farklı **K değerlerinin** model sonuçlarına etkisi
 
-* Linear Regression
-* Çoklu değişkenli regresyon
-* Model tahminleri ve hata analizi
+* Sınıflandırma mantığı
 
-### 🔹 Sınıflandırma Modelleri
+* En yakın komşu hesaplamaları
 
-* Logistic Regression
-* KNN (K-Nearest Neighbors)
-* Decision Tree / Random Forest
+* `learning1.png`
 
-### 🔹 Model Değerlendirme
+  * KNN sonuçlarını veya veri dağılımını gösteren görsel çıktı
 
-* Accuracy, Precision, Recall, F1-Score
-* Confusion Matrix
-* Overfitting & Underfitting analizi
+📌 **Amaç:** KNN algoritmasında K parametresinin model performansına etkisini göstermek.
 
-### 🔹 Veri Görselleştirme
+---
 
-* Grafiklerle veri analizi
-* Model sonuçlarının görsel sunumu
+### 📂 `knn_example/` – KNN ve Decision Tree Örnekleri
+
+Bu klasör, hem **KNN** hem de **Decision Tree** algoritmalarının **örnekler ve notebooklar** üzerinden anlatıldığı daha detaylı çalışmaları içerir.
+
+* `knn_example1.py`
+
+  * Basit KNN uygulaması (script tabanlı)
+
+* `knn_example2.ipynb`
+
+  * Adım adım KNN anlatımı
+  * Görselleştirmeler ve açıklamalar
+
+* `knn_and_tree_example.ipynb`
+
+* `knn_and_tree_example2.ipynb`
+
+  * KNN ve Decision Tree algoritmalarının karşılaştırılması
+  * Aynı veri seti üzerinde iki farklı yaklaşım
+
+📌 **Amaç:** Algoritmalar arasındaki farkları uygulamalı olarak göstermek.
 
 ---
 
 ## 🛠 Kullanılan Teknolojiler
 
-| Teknoloji            | Açıklama                              |
-| -------------------- | ------------------------------------- |
-| Python               | Ana programlama dili                  |
-| Jupyter Notebook     | Deneysel ve açıklamalı çalışma ortamı |
-| NumPy                | Sayısal hesaplamalar                  |
-| Pandas               | Veri işleme ve analiz                 |
-| Scikit-Learn         | Makine öğrenimi algoritmaları         |
-| Matplotlib / Seaborn | Veri görselleştirme                   |
+* **Python**
+* **NumPy**
+* **Scikit-Learn**
+* **Matplotlib**
+* **Jupyter Notebook**
 
 ---
 
-## ▶️ Çalıştırma Adımları
+## ▶️ Nasıl Çalıştırılır?
 
 1. Repository'yi klonlayın:
 
@@ -99,24 +135,22 @@ git clone https://github.com/kadir465/Machine_Learning.git
 2. Proje dizinine girin:
 
 ```bash
-cd Machine_Learning
+cd Machine_Learning/machine_learninig/machine_learn
 ```
 
-3. (Opsiyonel) Sanal ortam oluşturun:
+3. Gerekli kütüphaneleri yükleyin:
 
 ```bash
-python -m venv venv
-source venv/bin/activate  # Linux / macOS
-venv\Scripts\activate     # Windows
+pip install numpy scikit-learn matplotlib
 ```
 
-4. Gerekli kütüphaneleri yükleyin:
+4. Python dosyalarını çalıştırın:
 
 ```bash
-pip install numpy pandas scikit-learn matplotlib seaborn jupyter
+python machine_learning_KNN1.py
 ```
 
-5. Jupyter Notebook'u başlatın:
+veya notebook için:
 
 ```bash
 jupyter notebook
@@ -124,32 +158,20 @@ jupyter notebook
 
 ---
 
-## 📌 Hedef Kitle
+## 🎓 Kimler İçin Uygun?
 
 * Makine öğrenimine yeni başlayanlar
 * Üniversite öğrencileri
-* Veri bilimi ve yapay zeka alanına ilgi duyan geliştiriciler
-* Portföy oluşturmak isteyenler
+* KNN ve Decision Tree algoritmalarını öğrenmek isteyenler
+* Python ile ML pratiği yapmak isteyenler
 
 ---
 
-## 🤝 Katkı Sağlama
+## 👤 Geliştirici
 
-Katkılara açıktır 🚀
-
-1. Repo'yu fork'layın
-2. Yeni bir branch oluşturun (`feature/yeni-model`)
-3. Değişikliklerinizi commit edin
-4. Pull Request gönderin
-
----
-
-## 📄 Lisans
-
-Bu proje eğitim ve öğrenme amaçlıdır. Açık kaynak olarak paylaşılmıştır.
-
----
-
-👤 **Geliştirici**
 **Kadir Emir Yücel**
-Makine Öğrenimi • Yazılım Geliştirme • Eğitim Odaklı Projeler
+Machine Learning • Python • Eğitim Odaklı Projeler
+
+---
+
+📌 *Bu repo, makine öğrenimi algoritmalarını sade, anlaşılır ve örneklerle öğretmeyi hedefler.*
